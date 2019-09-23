@@ -18,7 +18,7 @@
 
 ### Why are JavaScript functions 'first-class functions'?
 
-- because in JS, functions are Objects
+- because in JS, functions are Objects:
     
     - they can be assigned properties
 
@@ -93,7 +93,7 @@ See the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWork
 
 Note: The examples we looked at together are in
 [/parts/06-asynchronous-js-example.js](https://github.com/hora/lhl-w2d2/blob/master/parts/06-asynchronous-js-example.js)
-and [/parts/06a-asynchronous-js-example.js](https://github.com/hora/lhl-w2d2/blob/master/parts/06a-asynchronous-js-example.js).
+and [/parts/06a-asynchronous-js-example2.js](https://github.com/hora/lhl-w2d2/blob/master/parts/06a-asynchronous-js-example2.js).
 
 ## Async code and scope
 

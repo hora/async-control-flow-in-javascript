@@ -16,7 +16,7 @@
 
 ### Why are JavaScript functions 'first-class functions'?
 
-- because in JS, functions are Objects
+- because in JS, functions are Objects:
     
     - they can be assigned properties
 
