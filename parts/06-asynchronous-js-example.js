@@ -1,14 +1,9 @@
-// Assuming it takes 3 seconds (3000ms) to prepare one
-// item.
-
 const prepareFood = function(food, quantity) {
-
-   // syntax: setTimeout(callback, delay)
-
-    setTimeout(function() {
-        console.log(`Serving ${quantity} orders of ${food}.`);
-    }, 3000 * quantity)
+    for (let i = 0; i < quantity; i++) {
+        console.log(`Preparing ${food}.`);
+    }
     
+    console.log(`Serving ${quantity} orders of ${food}.`);
 };
 
 console.log('Welcome to Lighthouse Cafe!');
