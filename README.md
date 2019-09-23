@@ -62,7 +62,8 @@
 - One possible solution to this problem is to use
   asynchronous code instead.
 
-Note: The example we looked at together is in [path](04).
+Note: The example we looked at together is in
+[/parts/04-synchronous-js-example.js](https://github.com/hora/lhl-w2d2/blob/master/parts/04-synchronous-js-example.js).
 
 ## Asynchronous JavaScript
 
@@ -90,13 +91,17 @@ setTimeout(function(){
 
 See the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) for more details.
 
-Note: The examples we looked at together are in [path](06) and [path](06a).
+Note: The examples we looked at together are in
+[/parts/06-asynchronous-js-example.js](https://github.com/hora/lhl-w2d2/blob/master/parts/06-asynchronous-js-example.js)
+and [/parts/06a-asynchronous-js-example.js](https://github.com/hora/lhl-w2d2/blob/master/parts/06a-asynchronous-js-example.js).
 
 ## Async code and scope
 
 - Scope is a bit trickier when working with async code.
 
-Note: The examples we looked at together are in [path](07) and [path](08).
+Note: The examples we looked at together are in
+[/parts/07-async-scope1.js](https://github.com/hora/lhl-w2d2/blob/master/parts/07-async-scope1.js)
+and [/parts/08-async-scope2.js](https://github.com/hora/lhl-w2d2/blob/master/parts/08-async-scope2.js).
 
 ## Events
 
@@ -115,7 +120,8 @@ Note: The examples we looked at together are in [path](07) and [path](08).
 - An **Event Handler** is a callback function that will be
   called when an event is triggered.
 
-Note: The example we looked at together is in [path](11).
+Note: The example we looked at together is in
+[/parts/11-mystery-example.js](https://github.com/hora/lhl-w2d2/blob/master/parts/11-mystery-example.js).
 
 ## `process.stdin` and `process.stdout`
 
@@ -159,6 +165,9 @@ process.stdout.write(string);
 
 process.stdout.write('Hello, world!\n');
 ```
+
+Note: The example we looked at together is in
+[/parts/13-stdin-stdout-example.js](https://github.com/hora/lhl-w2d2/blob/master/parts/13-stdin-stdout-example.js).
 
 ## References and further reading
 
