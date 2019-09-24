@@ -49,6 +49,8 @@
 
     - [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
+Example from lecture:
+
 ```js
 const foundWaldo = function() {
     console.log('we found waldo!');
