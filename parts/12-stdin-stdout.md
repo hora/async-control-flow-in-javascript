@@ -28,7 +28,7 @@ process.stdin.on('data', function() {
 ### `stdout.write`
 
 - `stdout.write` is a function that writes to the console.
-  Note that it does not write a 'new line' (`'`n`'`), but
+  Note that it does not write a 'new line' (`'\n'`), but
   that we have to do that ourselves (if we wish to).
 
 ```js

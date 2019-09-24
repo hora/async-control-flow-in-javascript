@@ -1,11 +1,14 @@
 ```js
-const delay = 1000;
+//const delay = 1000;
 
 const clap = function() {
     console.log('CLAP!');
 }
 
-setTimeout(clap, delay);
+setTimeout(clap, 4000);
+setTimeout(clap, 2000);
+setTimeout(clap, 0);
+clap();
 ```
 
 1. Three `setTimeout`-ers, three function callers.
