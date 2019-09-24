@@ -4,11 +4,66 @@
 
 ### What are functions?
 
+- blocks of code that serve a specific purpose
+
+- all functions are objects
+
+- can optionally return one structure at a time (ex: a
+  Number, a String, an Array, etc)
+
+- ideally they serve a single purpose
+
+- can have side-effects: changes some part of program
+  state directly
+
+- functions can have names or they can be anonymous
+
+- functions can have parameters / arguments
+
 ### Why are JavaScript functions 'first-class functions'?
+
+- functions in JS are objects
+
+- can be passed as arguments to other functions
+
+- can be returned by other functions
+
+- can be the property of an object
+
+- can have properties
 
 ### What are 'higher order' functions?
 
+- a function that takes another function as a parameter
+  and / or returns one
+
 ### What are callback functions (or callbacks)?
+
+- a callback is a function F1 that is passed to another
+  function F2, and that F2 'calls back' as a result of its
+  operations
+
+- examples we've seen:
+
+    - [Array.prototpye.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+
+    - [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
+```js
+const foundWaldo = function() {
+    console.log('we found waldo!');
+}
+
+const lookForWaldo = function(people, foundAction) {
+    for (let person of people) {
+        if (person === 'waldo') {
+            foundAction();
+        }
+    }
+}
+
+lookForWaldo(['alice', 'bob', 'waldo', 'suzie'], foundWaldo);
+```
 
 ## Synchronous JavaScript
 
@@ -29,7 +84,7 @@
   asynchronous code instead.
 
 Note: The example we looked at together is in
-[/parts/04-synchronous-js-example.js](https://github.com/hora/lhl-w2d2/blob/master/parts/04-synchronous-js-example.js).
+[/parts/04-synchronous-js-example.js](https://github.com/hora/lhl-w2d2/blob/2019-sep-24/parts/04-synchronous-js-example.js).
 
 ## Asynchronous JavaScript
 
@@ -57,17 +112,16 @@ setTimeout(function(){
 
 See the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) for more details.
 
-Note: The examples we looked at together are in
-[/parts/06-asynchronous-js-example.js](https://github.com/hora/lhl-w2d2/blob/master/parts/06-asynchronous-js-example.js)
-and [/parts/06a-asynchronous-js-example2.js](https://github.com/hora/lhl-w2d2/blob/master/parts/06a-asynchronous-js-example2.js).
+Note: The example we looked at together is in
+[/parts/06-asynchronous-js-example.js](https://github.com/hora/lhl-w2d2/blob/2019-sep-24/parts/06-asynchronous-js-example.js).
 
 ## Async code and scope
 
 - Scope is a bit trickier when working with async code.
 
 Note: The examples we looked at together are in
-[/parts/07-async-scope1.js](https://github.com/hora/lhl-w2d2/blob/master/parts/07-async-scope1.js)
-and [/parts/08-async-scope2.js](https://github.com/hora/lhl-w2d2/blob/master/parts/08-async-scope2.js).
+[/parts/07-async-scope1.js](https://github.com/hora/lhl-w2d2/blob/2019-sep-24/parts/07-async-scope1.js)
+and [/parts/08-async-scope2.js](https://github.com/hora/lhl-w2d2/blob/2019-sep-24/parts/08-async-scope2.js).
 
 ## Events
 
@@ -85,9 +139,6 @@ and [/parts/08-async-scope2.js](https://github.com/hora/lhl-w2d2/blob/master/par
 
 - An **Event Handler** is a callback function that will be
   called when an event is triggered.
-
-Note: The example we looked at together is in
-[/parts/11-mystery-example.js](https://github.com/hora/lhl-w2d2/blob/master/parts/11-mystery-example.js).
 
 ## `process.stdin` and `process.stdout`
 
@@ -133,7 +184,7 @@ process.stdout.write('Hello, world!\n');
 ```
 
 Note: The example we looked at together is in
-[/parts/13-stdin-stdout-example.js](https://github.com/hora/lhl-w2d2/blob/master/parts/13-stdin-stdout-example.js).
+[/parts/13-stdin-stdout-example.js](https://github.com/hora/lhl-w2d2/blob/2019-sep-24/parts/13-stdin-stdout-example.js).
 
 ## References and further reading
 
