@@ -1,23 +1,20 @@
-// Assume that it takes 3000ms (3 seconds) to prepare one
-// item of food
+const prepareFood = function(food, quantity) {
 
-const prepareFood = function(food, quantity, cookingTime) {
+    // Let's assume it takes 3 seconds to prepare a food item
 
-    // syntax for setTimeout
-    // setTimeout(callback, delay);
+    console.log(`Preparing ${quantity} ${food}`);
 
     setTimeout(function() {
-        console.log(`Serving ${quantity} orders of ${food}.`);
-    }, cookingTime * quantity);
-    
-};
+        console.log(`Serving ${quantity} ${food}`);
+    }, 3000 * quantity);
 
-console.log('Welcome to Lighthouse Cafe!');
+}
 
-console.log('Two pancakes, please.')
-prepareFood('pancakes', 2, 5000);
+console.log('Hi! Can I take your order?');
 
-console.log('Can I get a soup?');
-prepareFood('soup', 1, 2000);
+console.log('3 pancakes, please');
+prepareFood('pancakes', 3);
 
+console.log('1 coffee, please');
+prepareFood('coffee', 1);
 

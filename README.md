@@ -1,47 +1,54 @@
 # W2D2 - Asynchronous Control Flow
 
+## Example from lecture this morning
+
+To see the examples we coded this morning, look in the [/parts](/parts)
+directory in this repo. Look for files ending in `.js` for the code.
+
 ## Recap - Functions and Callbacks
 
 ### What are functions?
 
-- blocks of code that serve a specific purpose
-
-- all functions are objects
-
-- can optionally return one structure at a time (ex: a
-  Number, a String, an Array, etc)
-
-- ideally they serve a single purpose
-
-- can have side-effects: changes some part of program
-  state directly
-
-- functions can have names or they can be anonymous
-
-- functions can have parameters / arguments
+- usually named blocks of code that serve a purpose
+- can take in input (arguments) and return output
+- breaks a bigger problem into smaller problems
 
 ### Why are JavaScript functions 'first-class functions'?
 
-- functions in JS are objects
-
-- can be passed as arguments to other functions
-
-- can be returned by other functions
-
-- can be the property of an object
-
-- can have properties
-
-### What are 'higher order' functions?
-
-- a function that takes another function as a parameter
-  and / or returns one
+- pass them as arguments to other functions
+- JS functions are technically objects
 
 ### What are callback functions (or callbacks)?
 
-- a callback is a function F1 that is passed to another
-  function F2, and that F2 'calls back' as a result of its
-  operations
+- function passed in as an argument, used to produce the next step? return a
+  result?
+
+```js
+// the function passed to forEach is a callback
+[1, 2, 3].forEach(function(num) {
+    console.log(num);
+});
+
+const doubles = [];
+
+[1, 2, 3].forEach(function(num) {
+    doubles.push(num * 2);
+});
+
+// .map will do the same thing as the code just above
+const doubles = [1, 2, 3].map(function(num) {
+    return num * 2;
+});
+
+// we also can give names to our functions,
+// then pass them as callbacks
+const doubleNum = function(x) {
+    return x * 2;
+}
+
+// note that we pass doubleNum as a reference to .map (we don't call it)
+let doubles = [1, 2, 3].map(doubleNum);
+```
 
 - examples we've seen:
 
@@ -49,23 +56,6 @@
 
     - [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
-Example from lecture:
-
-```js
-const foundWaldo = function() {
-    console.log('we found waldo!');
-}
-
-const lookForWaldo = function(people, foundAction) {
-    for (let person of people) {
-        if (person === 'waldo') {
-            foundAction();
-        }
-    }
-}
-
-lookForWaldo(['alice', 'bob', 'waldo', 'suzie'], foundWaldo);
-```
 
 ## Synchronous JavaScript
 
@@ -84,9 +74,6 @@ lookForWaldo(['alice', 'bob', 'waldo', 'suzie'], foundWaldo);
 
 - One possible solution to this problem is to use
   asynchronous code instead.
-
-Note: The example we looked at together is in
-[/parts/04-synchronous-js-example.js](https://github.com/hora/lhl-w2d2/blob/2019-sep-24/parts/04-synchronous-js-example.js).
 
 ## Asynchronous JavaScript
 
@@ -114,16 +101,10 @@ setTimeout(function(){
 
 See the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) for more details.
 
-Note: The example we looked at together is in
-[/parts/06-asynchronous-js-example.js](https://github.com/hora/lhl-w2d2/blob/2019-sep-24/parts/06-asynchronous-js-example.js).
-
 ## Async code and scope
 
-- Scope is a bit trickier when working with async code.
-
-Note: The examples we looked at together are in
-[/parts/07-async-scope1.js](https://github.com/hora/lhl-w2d2/blob/2019-sep-24/parts/07-async-scope1.js)
-and [/parts/08-async-scope2.js](https://github.com/hora/lhl-w2d2/blob/2019-sep-24/parts/08-async-scope2.js).
+- Scope is a bit trickier when working with async code (see the examples in
+  [/parts](/parts))
 
 ## Events
 
@@ -184,9 +165,6 @@ process.stdout.write(string);
 
 process.stdout.write('Hello, world!\n');
 ```
-
-Note: The example we looked at together is in
-[/parts/13-stdin-stdout-example.js](https://github.com/hora/lhl-w2d2/blob/2019-sep-24/parts/13-stdin-stdout-example.js).
 
 ## References and further reading
 
