@@ -1,4 +1,7 @@
-# W2D2 - Asynchronous Control Flow
+# Asynchronous Control Flow in JavaScript
+
+_Note: This repo collects the lecture notes and code examples I created
+for Lighthouse Labs (W2D2)._
 
 ## Recap - Functions and Callbacks
 
